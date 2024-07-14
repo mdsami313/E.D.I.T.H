@@ -14,7 +14,7 @@ from gtts import gTTS
 
 st.write(css, unsafe_allow_html=True)
 
-GENAI_API_KEY = "AIzaSyCbRM1raXsjteH45M92e49YvmBTkcTN1M0"
+GENAI_API_KEY = PALM_API
 os.environ["GOOGLE_API_KEY"] = GENAI_API_KEY
 
 genai.configure(api_key=GENAI_API_KEY)
