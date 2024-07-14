@@ -16,7 +16,7 @@ st.write(css, unsafe_allow_html=True)
 
 GENAI_API_KEY = st.secrets["api_keys"]["PALM_API"]
 
-st.set_page_config(page_title="Chat with multiple PDFs" ,page_icon=":books:")
+st.title("Chat with multiple PDFs :books:")
 
 
 if 'doc' not in st.session_state:
