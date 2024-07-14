@@ -1,6 +1,8 @@
 import streamlit as st
 from cwe import css
 
+st.write(css, unsafe_allow_html=True)
+
 def main():
     
     try:
