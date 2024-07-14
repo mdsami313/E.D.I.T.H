@@ -11,13 +11,10 @@ import os
 from langchain_community.embeddings import GooglePalmEmbeddings
 from io import BytesIO
 from gtts import gTTS 
-import toml
-# Load the TOML file
-config = toml.load('config.toml')
 
 st.write(css, unsafe_allow_html=True)
 
-GENAI_API_KEY = config['api_keys']['PALM_API']
+GENAI_API_KEY = st.secrets["api_keys"]["PALM_API"]
 os.environ["GOOGLE_API_KEY"] = GENAI_API_KEY
 
 genai.configure(api_key=GENAI_API_KEY)
