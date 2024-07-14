@@ -22,8 +22,7 @@ genai.configure(api_key=GENAI_API_KEY)
 
 
 
-st.set_page_config(page_title="Chat with multiple PDFs",
-                    page_icon=":books:")
+st.set_page_config(page_title="Chat with multiple PDFs")
 
 
 if 'doc' not in st.session_state:
