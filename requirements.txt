@@ -6,4 +6,4 @@ google-generativeai
 langchain_community
 gtts
 huggingface_hub
-faiss-gpu
+faiss-cpu
