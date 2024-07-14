@@ -44,8 +44,8 @@ solution:
 
 st.write(css, unsafe_allow_html=True)
 
-PALM_API_KEY = "AIzaSyCbRM1raXsjteH45M92e49YvmBTkcTN1M0"
-client = InferenceClient(model="emilianJR/CyberRealistic_V3", token="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")
+PALM_API_KEY = PALM_API
+client = InferenceClient(model="emilianJR/CyberRealistic_V3", token=INF_API)
 palm.configure(api_key=PALM_API_KEY)
 model = "models/text-bison-001"
 
