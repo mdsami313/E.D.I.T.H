@@ -5,9 +5,6 @@ import base64
 from huggingface_hub import InferenceClient
 import io
 from cwe import css, user_template, bot_template
-import toml
-# Load the TOML file
-config = toml.load('config.toml')
 
 prompt_template05 = """
 You are an AI Bot named EDITH, you should answer every query truthfully as possible and don't provide false information,
@@ -45,8 +42,8 @@ solution:
 
 st.write(css, unsafe_allow_html=True)
 
-PALM_API_KEY = config['api_keys']['PALM_API']
-client = InferenceClient(model="emilianJR/CyberRealistic_V3", token=config['api_keys']['INF_API'])
+PALM_API_KEY = st.secrets["api_keys"]["PALM_API"]
+client = InferenceClient(model="emilianJR/CyberRealistic_V3", token=st.secrets["api_keys"]['INF_API'])
 palm.configure(api_key=PALM_API_KEY)
 model = "models/text-bison-001"
 
